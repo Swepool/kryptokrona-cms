@@ -71,27 +71,6 @@ const SideBtnWrap = styled.div`
   justify-content: center;
 `;
 
-const SidebarRoute = styled.a`
-  border-radius: 50px;
-  background: #01bf71;
-  white-space: nowrap;
-  color: #010606;
-  font-size: 16px;
-  outline: none;
-  border: none;
-  cursor: pointer;
-  transition: all 0.2s ease-in-out;
-  text-decoration: none;
-  margin: 0;
-
-  &:hover {
-    transition: all 0.2s ease-in-out;
-    background: #fff;
-    color: #010606;
-  }
-`;
-
-
 
 const Sidebar = ({ isOpen, toggle }) => {
     return (

@@ -1,124 +1,172 @@
-import * as React from 'react'
-import Container from "./Container";
+import React from 'react';
 import styled from "@emotion/styled";
 import {Link} from "gatsby";
-import LogoLight from '../assets/images/Logo-White.svg'
+import Container from "./Container";
 
-const FooterStyle = styled.div`
-  display: flex;
-  flex-direction: column;
-  margin-top: 140px;
+const FooterContainer = styled.footer`
   background-color: #2a2a2a;
-  color: #ffffff80;
+  padding-top: 40px;
 `;
 
-const FooterContainer = styled.div`
-  width: 100%;
-  padding-top: 100px;
-  padding-bottom: 40px;
+const FooterWrap = styled.div`
+  width: auto;
   display: flex;
   flex-direction: column;
-  justify-content: end;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 0 auto;
 `;
 
-const RightDiv = styled.div`
+const FooterLinksContainer = styled.div`
   display: flex;
-  justify-content: space-between;
-  gap: 40px;
-  align-items: start;
+  width: 100%;
+  justify-content: center;
 
-  @media screen and (max-width: 475px) {
-    flex-direction: column;
-    gap: 10px;
+  @media screen and (max-width: 820px) {
+    padding-top: 32px;
+    justify-content: start;
   }
 `;
 
-const List = styled.ul`
-  padding: 0;
-  margin: 0;
-`;
-
-const ListContainer = styled.div`
+const FooterLinksWrapper = styled.div`
   display: flex;
-  gap: 40px;
+  
 
-  @media screen and (max-width: 475px) {
+  @media screen and (max-width: 820px) {
     flex-direction: column;
-    gap: 0px
   }
 `;
 
-const ListItem = styled.li`
-  list-style-type: none;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  margin: 0;
-  color: rgba(255, 255, 255, 0.49);
+const FooterLinkItems = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 20px;
+  text-align: left;
+  width: 160px;
+  box-sizing: border-box;
+  color: #fff;
+
+  @media screen and (max-width: 420px) {
+    margin: 0;
+    padding: 10px;
+    width: 100%;
+  }
+`;
+
+const FooterLinkTitle = styled.h1`
+  font-size: 24px;
+  margin-bottom: 16px;
+  color: #fff
+`;
+
+const FooterLink = styled(Link)`
+  color: rgba(255, 255, 255, 0.5);
+  text-decoration: none;
+  margin-bottom: 0.5rem;
+  font-size: 18px;
 
   &:hover {
-    transition: 200ms;
-    color: #fff;
-    cursor: pointer;
+    color: #ffffff;
+    transition: 0.3s ease-out;
   }
-`
+`;
 
-const Title = styled.h3`
-    color: #fff;
-  font-weight: 400;
-  margin: 0;
-  margin-bottom: 10px;
-  @media screen and (max-width: 475px) {
+const SocialMedia = styled.section`
+  width: 100%;
+`;
 
+const SocialMediaWrap = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 40px auto 0 auto;
+
+  @media screen and (max-width: 820px) {
+    flex-direction: column;
+    align-items: start;
   }
-`
+`;
 
-const Brand = styled.img`
-  margin: 0;
-`
+const SocialLogo = styled(Link)`
+  color: #fff;
+  justify-self: start;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+  font-weight: bold;
+`;
+
+const WebsiteRights = styled.small`
+  color: #fff;
+  margin-bottom: 16px;
+`;
+
+const SocialIcons = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 240px;
+`;
+
+const SocialIconLink = styled.a`
+  color: #fff;
+  font-size: 24px;
+`;
 
 const Footer = () => {
     return (
-        <FooterStyle>
+        <FooterContainer>
             <Container>
-                <FooterContainer>
-                    <RightDiv>
-                        <div>
-                            <Brand src={LogoLight} alt={'NBX logo'}/>
-                            <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignText:'center'}}>
-                                <div style={{display: 'flex', gap: 10, margin: 0}}>
-                                    <p>Terms</p>
-                                    <p>Privacy</p>
-                                    <p>Cookies</p>
-                                </div>
-                                <p style={{margin: 0}}>© 2021. All rights reserved.</p>
-                            </div>
-                        </div>
-                        <ListContainer>
-                            <List>
-                                <Title>Company</Title>
-                                <Link to='/about'><ListItem>About</ListItem></Link>
-                                <Link to='/careers'><ListItem>Careers</ListItem></Link>
-                                <Link to='/investors'><ListItem>Investors</ListItem></Link>
-                                <Link to='/corporate'><ListItem>Corporate</ListItem></Link>
-                            </List>
-                            <List>
-                                <Title>Info</Title>
-                                <Link to='/blog'><ListItem>Blog</ListItem></Link>
-                                <Link to='/#'><ListItem>Learn</ListItem></Link>
-                                <Link to='/#'><ListItem>News</ListItem></Link>
-                            </List>
-                            <List>
-                                <Title>Platform</Title>
-                                <Link to='https://api.nbx.com/'><ListItem>API</ListItem></Link>
-                                <Link to='/#'><ListItem>Security</ListItem></Link>
-                                <Link to='/#'><ListItem>Support</ListItem></Link>
-                            </List>
-                        </ListContainer>
-                    </RightDiv>
-                </FooterContainer>
+            <FooterWrap>
+                <FooterLinksContainer>
+                    <FooterLinksWrapper>
+                        <FooterLinkItems>
+                            <FooterLinkTitle>Company</FooterLinkTitle>
+                            <FooterLink to='/sign-up'>About us</FooterLink>
+                            <FooterLink to='/'>Careers</FooterLink>
+                            <FooterLink to='/'>Corporate</FooterLink>
+                            <FooterLink to='/'>Investors</FooterLink>
+                        </FooterLinkItems>
+                        <FooterLinkItems>
+                            <FooterLinkTitle>Contact</FooterLinkTitle>
+                            <FooterLink to='/'>Contact</FooterLink>
+                            <FooterLink to='/'>Support</FooterLink>
+                            <FooterLink to='/'>Business</FooterLink>
+                            <FooterLink to='/'>Marketing</FooterLink>
+                        </FooterLinkItems>
+                        <FooterLinkItems>
+                            <FooterLinkTitle>Socials</FooterLinkTitle>
+                            <FooterLink to='/'>Twitter</FooterLink>
+                            <FooterLink to='/'>Facebook</FooterLink>
+                            <FooterLink to='/'>LinkedIn</FooterLink>
+                            <FooterLink to='/'>Instagram</FooterLink>
+                        </FooterLinkItems>
+                        <FooterLinkItems>
+                            <FooterLinkTitle>Platform</FooterLinkTitle>
+                            <FooterLink to='/'>API</FooterLink>
+                            <FooterLink to='/'>Terms</FooterLink>
+                            <FooterLink to='/'>Cookies</FooterLink>
+                            <FooterLink to='/'>Privacy</FooterLink>
+                            <FooterLink to='/'>Security</FooterLink>
+                        </FooterLinkItems>
+                    </FooterLinksWrapper>
+                </FooterLinksContainer>
+                <SocialMedia>
+                    <SocialMediaWrap>
+                        <SocialLogo to='/'>
+                            Logo
+                        </SocialLogo>
+                        <WebsiteRights>2020 All rights reserved.</WebsiteRights>
+                    </SocialMediaWrap>
+                </SocialMedia>
+            </FooterWrap>
             </Container>
-        </FooterStyle>
-    )
-}
+        </FooterContainer>
+    );
+};
 
 export default Footer
