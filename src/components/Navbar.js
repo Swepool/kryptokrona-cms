@@ -2,7 +2,7 @@ import * as React from "react";
 import Container from "./Container";
 import BorderButton from "./BorderButton";
 import { Link } from "gatsby";
-import LogoDark from '../assets/images/logo.svg'
+import LogoDark from '/src/assets/images/Logo.svg'
 import styled from "@emotion/styled";
 
 
