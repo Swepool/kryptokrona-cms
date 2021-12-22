@@ -67,7 +67,7 @@ const Navbar = ({ toggle }) => {
                     <img style={{Height: '40px'}}src={LogoDark} alt={'NBX logo'}/>
                 </Link>
                 <NavNavigation>
-                    <Link to="/about">
+                    <Link to="/blog">
                         <Text>About us</Text>
                     </Link>
                     <Link to={"https://app.nbx.com/markets"}>
@@ -84,7 +84,7 @@ const Navbar = ({ toggle }) => {
                     <BorderButton url={"https://app.nbx.com/login/signup"} text={"Sign up"} />
                     <BorderButton url={"https://app.nbx.com/login"} text={"Log in"} />
                 </NavButtons>
-                <Hamburger onClick={toggle}><h3>Hello</h3></Hamburger>
+                <Hamburger onClick={toggle}><h3>=</h3></Hamburger>
             </NavContainer>
         </Container>
     );

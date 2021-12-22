@@ -1,12 +1,13 @@
 import React from 'react';
 import styled from "@emotion/styled";
+import BorderButtonWhite from "./BorderButtonWhite";
 
 const SidebarContainer = styled.aside`
   position: fixed;
   z-index: 999;
   width: 100%;
   height: 100%;
-  background: #0d0d0d;
+  background: #2a2a2a;
   display: grid;
   align-items: center;
   top: 0;
@@ -40,7 +41,7 @@ const SidebarMenu = styled.ul`
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(6, 80px);
-  text-align: center;
+  padding-inline-start: 0;
 
   @media screen and (max-width: 480px) {
     grid-template-rows: repeat(6, 60px);
@@ -74,7 +75,6 @@ const SidebarRoute = styled.a`
   border-radius: 50px;
   background: #01bf71;
   white-space: nowrap;
-  padding: 16px 64px;
   color: #010606;
   font-size: 16px;
   outline: none;
@@ -82,6 +82,7 @@ const SidebarRoute = styled.a`
   cursor: pointer;
   transition: all 0.2s ease-in-out;
   text-decoration: none;
+  margin: 0;
 
   &:hover {
     transition: all 0.2s ease-in-out;
@@ -96,19 +97,19 @@ const Sidebar = ({ isOpen, toggle }) => {
     return (
         <SidebarContainer isOpen={isOpen} onClick={toggle}>
             <Icon onClick={toggle}>
-                <CloseIcon>menu</CloseIcon>
+                <CloseIcon>X</CloseIcon>
             </Icon>
             <SidebarWrapper>
                 <SidebarMenu>
                     <SidebarLink
+                        to='/blog'
                         onClick={toggle}
                         smooth={true}
                         duration={500}
                         spy={true}
                         exact='true'
-                        offset={-80}
                     >
-                        About
+                        About us
                     </SidebarLink>
                     <SidebarLink
                         onClick={toggle}
@@ -116,9 +117,8 @@ const Sidebar = ({ isOpen, toggle }) => {
                         duration={500}
                         spy={true}
                         exact='true'
-                        offset={-80}
                     >
-                        Discover
+                        Markets
                     </SidebarLink>
                     <SidebarLink
                         onClick={toggle}
@@ -126,9 +126,8 @@ const Sidebar = ({ isOpen, toggle }) => {
                         duration={500}
                         spy={true}
                         exact='true'
-                        offset={-80}
                     >
-                        Services
+                        OTC
                     </SidebarLink>
                     <SidebarLink
                         onClick={toggle}
@@ -136,13 +135,13 @@ const Sidebar = ({ isOpen, toggle }) => {
                         duration={500}
                         spy={true}
                         exact='true'
-                        offset={-80}
                     >
-                        Sign Up
+                        Support
                     </SidebarLink>
                 </SidebarMenu>
-                <SideBtnWrap>
-                    <SidebarRoute to='/signin'>Sign In</SidebarRoute>
+                <SideBtnWrap style={{display: 'flex', gap: '10px'}}>
+                    <BorderButtonWhite text={'Sign in'}/>
+                    <BorderButtonWhite text={'Log in'}/>
                 </SideBtnWrap>
             </SidebarWrapper>
         </SidebarContainer>
