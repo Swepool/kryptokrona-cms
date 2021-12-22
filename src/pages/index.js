@@ -76,7 +76,7 @@ const index = () => {
                         <Title>
                             Buy Bitcoin and Crypto with ease.
                         </Title>
-                        <p><Link to="/blog">View Blog</Link></p>
+                        <p><Link to="blog">View Blog</Link></p>
                         <Text>
                             Invest in your future. Trade Bitcoin, Ethereum, and other tokens
                             using NOK, SEK, DKK & EUR

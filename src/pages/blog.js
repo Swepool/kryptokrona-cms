@@ -1,39 +1,22 @@
-import * as React from 'react'
-import Layout from "../components/Layout";
-import Container from "../components/Container";
-import styled from "@emotion/styled";
-import PageHeader from "../components/PageHeader";
-import BlogRoll from "../components/BlogRoll";
-
-const BlogWrapper = styled.div`
-  display: flex;
-  gap: 40px;
-  flex-wrap: wrap;
-`;
 
 
-const Blog = () => {
-    return(
-        <Layout>
-            <Container>
-                <PageHeader
-                    title={'This is where we tell stories'}
-                    heading1={'Posts'}
-                    text1={'7'}
-                    heading2={'Categories'}
-                    text2={'5'}
-                    heading3={'Authors'}
-                    text3={'3'}
-                />
-                <BlogWrapper>
-                    <BlogRoll/>
-                </BlogWrapper>
-            </Container>
-        </Layout>
-    )
+import React from 'react'
+
+import BlogRoll from '../components/BlogRoll'
+
+class BlogIndexPage extends React.Component {
+    render() {
+        return (
+            <React.Fragment>
+                <h1>Latest Posts</h1>
+                <section>
+                    <div className="content">
+                        <BlogRoll />
+                    </div>
+                </section>
+            </React.Fragment>
+        )
+    }
 }
 
-export default Blog
-
-
-
+export default BlogIndexPage
