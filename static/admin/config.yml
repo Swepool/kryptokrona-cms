@@ -17,3 +17,4 @@ collections:
       - {label: "Featured Image", name: "thumbnail", widget: "image"}
       - {label: "Summary", name: "summary", widget: "markdown"}
       - {label: "Body", name: "body", widget: "markdown"}
+      - {label: Tags, name: tags, widget: list, default: ['Blog', 'News']}

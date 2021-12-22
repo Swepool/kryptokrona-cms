@@ -26,11 +26,13 @@ const BlogImage = styled.img`
 
 const Title = styled.h2`
     font-size: 30px;
+  color: #2a2a2a;
   margin-top: 0;
 `;
 
 const Text = styled.p`
     text-align: justify;
+  color: #2a2a2a;
     
 `;
 const Category = styled.p`
@@ -39,7 +41,8 @@ const Category = styled.p`
 `;
 
 const Date = styled.p`
-    font-size: 16px;
+  font-size: 16px;
+  color: rgba(42, 42, 42, 0.6);
 `;
 
 const BlogWrapper = styled.div`
