@@ -15,6 +15,7 @@ export default function Template({
                     <div className="blog-post">
                         <PageHeader title={frontmatter.title} heading2={'Published'} text2={frontmatter.date}/>
                         <div
+                            style={{height: '100%'}}
                             className="blog-post-content"
                             dangerouslySetInnerHTML={{ __html: html }}
                         />

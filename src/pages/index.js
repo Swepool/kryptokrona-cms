@@ -94,9 +94,9 @@ const index = () => {
 
 
                 <CardWrapper>
-                    <BorderCard icon={AvatarIcon} title={'First time'} text={'Whether you’re an expert or just getting started, we got everything you need to buy, sell or store your digital assets.'}></BorderCard>
-                    <BorderCard icon={ExpertIcon} title={'Expert'} text={'Enjoy easier access to the most popular and emerging cryptocurrencies through an intuitive interface.'}></BorderCard>
-                    <BorderCard icon={StatsIcon} title={'Corporate'} text={'Put BTC on your companys balance sheet or just simply invest in crypto.'}></BorderCard>
+                    <BorderCard icon={AvatarIcon} title={'First time'} text={'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'}></BorderCard>
+                    <BorderCard icon={ExpertIcon} title={'Expert'} text={'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'}></BorderCard>
+                    <BorderCard icon={StatsIcon} title={'Corporate'} text={'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'}></BorderCard>
                 </CardWrapper>
 
             </Container>
@@ -105,9 +105,9 @@ const index = () => {
 
             <Container>
                 <CardWrapper>
-                    <BorderCard icon={CheckIcon} title={'Register'} text={'To start your journey you first have to sign up to our platform, it only takes a couple of minutes.'}></BorderCard>
-                    <BorderCard icon={ChecksIcon} title={'Verify'} text={'To make a deposit we first have to verify you ID. Verification should not take long, this helps to secure your account.'}></BorderCard>
-                    <BorderCard icon={TradeIcon}title={'Trade'} text={'Now your journey begins, enjoy our platforms features and low fees. Need help? Let us know.'}></BorderCard>
+                    <BorderCard icon={CheckIcon} title={'Register'} text={'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'}></BorderCard>
+                    <BorderCard icon={ChecksIcon} title={'Verify'} text={'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'}></BorderCard>
+                    <BorderCard icon={TradeIcon}title={'Trade'} text={'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'}></BorderCard>
                 </CardWrapper>
             </Container>
 

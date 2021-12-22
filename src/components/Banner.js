@@ -50,19 +50,19 @@ const IndexBanner = () => {
                 <BannerWrapper>
                     <BannerItem>
                         <BannerTitle>Low fees</BannerTitle>
-                        <BannerText>Deposits are free, as we only charge a fee of 0.5% when trading.</BannerText>
+                        <BannerText>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua..</BannerText>
                     </BannerItem>
                     <BannerItem>
                         <BannerTitle>Custody</BannerTitle>
-                        <BannerText>Any crypto stored in Ledger Cold Wallet is also insured.</BannerText>
+                        <BannerText>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</BannerText>
                     </BannerItem>
                     <BannerItem>
                         <BannerTitle>Security</BannerTitle>
-                        <BannerText>NBX is registered with The Financial Supervisory Authority of Norway.</BannerText>
+                        <BannerText>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</BannerText>
                     </BannerItem>
                     <BannerItem>
                         <BannerTitle>Registered</BannerTitle>
-                        <BannerText>Get free Bitcoin by helping us getting more people to NBX.</BannerText>
+                        <BannerText>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</BannerText>
                     </BannerItem>
                 </BannerWrapper>
             </Container>

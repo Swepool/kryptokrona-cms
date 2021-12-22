@@ -6,6 +6,8 @@ import Container from "./Container";
 const FooterContainer = styled.footer`
   background-color: #2a2a2a;
   padding-top: 40px;
+  padding-bottom: 20px;
+  margin-top: 140px;
 `;
 
 const FooterWrap = styled.div`
