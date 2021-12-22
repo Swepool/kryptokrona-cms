@@ -1,9 +1,9 @@
 import React from 'react'
 import { Link } from 'gatsby'
-export default () => {
-  return (
-      <>
-        Hello world!
+const Index = () => {
+    return(
         <p><Link to="/blog">View Blog</Link></p>
-      </>)
+    )
 }
+
+export default Index
