@@ -6,7 +6,7 @@ import Footer from './Footer'
 import '../theme/style.css'
 
 
-function Home( { children } ) {
+const Home = ( { children } ) => {
     const [isOpen, setIsOpen] = useState(false);
 
     const toggle = () => {

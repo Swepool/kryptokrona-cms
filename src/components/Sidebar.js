@@ -1,8 +1,7 @@
 import React from 'react';
 import styled from "@emotion/styled";
-import FaTimes  from '../assets/icons/Avatar.svg'
 
-export const SidebarContainer = styled.aside`
+const SidebarContainer = styled.aside`
   position: fixed;
   z-index: 999;
   width: 100%;
@@ -18,11 +17,11 @@ export const SidebarContainer = styled.aside`
   z-index: 999;
 `;
 
-export const CloseIcon = styled(FaTimes)`
+const CloseIcon = styled.h3`
   color: #fff;
 `;
 
-export const Icon = styled.div`
+const Icon = styled.div`
   position: absolute;
   top: 1.2rem;
   right: 1.5rem;
@@ -33,11 +32,11 @@ export const Icon = styled.div`
   outline: none;
 `;
 
-export const SidebarWrapper = styled.div`
+const SidebarWrapper = styled.div`
   color: #fff;
 `;
 
-export const SidebarMenu = styled.ul`
+const SidebarMenu = styled.ul`
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(6, 80px);
@@ -48,7 +47,7 @@ export const SidebarMenu = styled.ul`
   }
 `;
 
-export const SidebarLink = styled.a`
+const SidebarLink = styled.a`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -66,12 +65,12 @@ export const SidebarLink = styled.a`
   }
 `;
 
-export const SideBtnWrap = styled.div`
+const SideBtnWrap = styled.div`
   display: flex;
   justify-content: center;
 `;
 
-export const SidebarRoute = styled.a`
+const SidebarRoute = styled.a`
   border-radius: 50px;
   background: #01bf71;
   white-space: nowrap;
@@ -97,12 +96,11 @@ const Sidebar = ({ isOpen, toggle }) => {
     return (
         <SidebarContainer isOpen={isOpen} onClick={toggle}>
             <Icon onClick={toggle}>
-                <CloseIcon />
+                <CloseIcon>menu</CloseIcon>
             </Icon>
             <SidebarWrapper>
                 <SidebarMenu>
                     <SidebarLink
-                        to='about'
                         onClick={toggle}
                         smooth={true}
                         duration={500}
@@ -113,7 +111,6 @@ const Sidebar = ({ isOpen, toggle }) => {
                         About
                     </SidebarLink>
                     <SidebarLink
-                        to='discover'
                         onClick={toggle}
                         smooth={true}
                         duration={500}
@@ -124,7 +121,6 @@ const Sidebar = ({ isOpen, toggle }) => {
                         Discover
                     </SidebarLink>
                     <SidebarLink
-                        to='services'
                         onClick={toggle}
                         smooth={true}
                         duration={500}
@@ -135,7 +131,6 @@ const Sidebar = ({ isOpen, toggle }) => {
                         Services
                     </SidebarLink>
                     <SidebarLink
-                        to='signup'
                         onClick={toggle}
                         smooth={true}
                         duration={500}
