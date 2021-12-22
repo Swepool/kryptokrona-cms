@@ -26,6 +26,15 @@ module.exports = {
       },
       __key: "images",
     },
+    `gatsby-plugin-netlify-cms`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/blog`,
+        name: `markdown-pages`,
+      },
+    },
+    `gatsby-transformer-remark`,
     {
       resolve: "gatsby-source-filesystem",
       options: {
