@@ -36,6 +36,7 @@ const Category = styled.p`
   font-size: 18px;
   color: rgba(42, 42, 42, 0.6);
 `;
+
 const Date = styled.p`
     font-size: 16px;
 `;
@@ -46,29 +47,16 @@ class BlogRoll extends React.Component {
         const { edges: posts } = data.allMarkdownRemark;
 
         return (
-
-
-            <div className="columns is-multiline">
+            <div>
                 {posts &&
                     posts.map(({ node: post }) => (
-                        <div className="is-parent column is-6" key={post.id}>
-                            <article
-                                className={`blog-list-item tile is-child box notification ${
-                                    post.frontmatter.featuredpost ? 'is-featured' : ''
-                                }`}
-                            >
-
-                                <Link to={post.frontmatter.path}>
-                                    <Card>
-                                        <Title>{post.frontmatter.title}</Title>
-                                        <Text>{post.excerpt}</Text>
-                                        <Date>{post.frontmatter.date}</Date>
-                                    </Card>
-                                </Link>
-
-
-                            </article>
-                        </div>
+                        <Card key={post.id}>
+                            <Link to={post.frontmatter.path}>
+                                <Title>{post.frontmatter.title}</Title>
+                                <Text>{post.excerpt}</Text>
+                                <Date>{post.frontmatter.date}</Date>
+                            </Link>
+                        </Card>
                     ))}
             </div>
         )
