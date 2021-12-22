@@ -42,6 +42,10 @@ const Title = styled.h1`
 const Text = styled.h2`
   font-weight: 400;
   margin: 0;
+
+  @media screen and (max-width: 425px) {
+    font-size: 28px;
+  }
 `;
 
 const CardWrapper = styled.div`
