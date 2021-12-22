@@ -83,9 +83,9 @@ const Navbar = () => {
                     <BorderButton url={"https://app.nbx.com/login/signup"} text={"Sign up"} />
                     <BorderButton url={"https://app.nbx.com/login"} text={"Log in"} />
                 </NavButtons>
-                <Hamburger>
-                    <p>Menu</p>
-                </Hamburger>
+                <Hamburger
+                    onClick={() => setShowMenu(!showMenu)}
+                />
                 <HamburgerMenu></HamburgerMenu>
             </NavContainer>
         </Container>

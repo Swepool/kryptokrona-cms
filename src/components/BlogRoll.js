@@ -7,6 +7,13 @@ const Card = styled.div`
   flex: 1 0 28%;
   border-bottom: 1px solid #2a2a2a;
 
+  &:hover {
+    transition: 300ms;
+    opacity: 60%;
+    backdrop-filter: blur(8);
+    
+  }
+
 
   @media screen and (max-width: 1440px) {
     flex: 1 0 40%;
@@ -35,7 +42,7 @@ const Text = styled.p`
   color: #2a2a2a;
     
 `;
-const Category = styled.p`
+const Tags = styled.p`
   font-size: 18px;
   color: rgba(42, 42, 42, 0.6);
 `;
@@ -65,8 +72,9 @@ class BlogRoll extends React.Component {
                         <Card key={post.id}>
                             <Link to={post.frontmatter.path}>
                                 <BlogImage src={post.frontmatter.thumbnail}/>
+                                <Tags>{post.frontmatter.tags}</Tags>
                                 <Title>{post.frontmatter.title}</Title>
-                                <Text>{post.excerpt}</Text>
+                                <Text>{post.frontmatter.summary}</Text>
                                 <Date>{post.frontmatter.date}</Date>
                             </Link>
                         </Card>
@@ -87,22 +95,25 @@ BlogRoll.propTypes = {
 const query = () => (
     <StaticQuery
         query={graphql`
-        query BlogRollQuery {
-          allMarkdownRemark(sort: {order: DESC, fields: [frontmatter___date]}) {
-            edges {
-              node {
-                excerpt(pruneLength: 400)
-                id
-                frontmatter {
-                  path
-                  title
-                  date(formatString: "MMMM DD, YYYY")
-                  thumbnail
-                }
-              }
-            }
-          }
+query BlogRollQuery {
+  allMarkdownRemark(sort: {order: DESC, fields: [frontmatter___date]}) {
+    edges {
+      node {
+        excerpt(pruneLength: 400)
+        id
+        frontmatter {
+          path
+          title
+          date(formatString: "MMMM DD, YYYY")
+          thumbnail
+          tags
+          summary
         }
+      }
+    }
+  }
+}
+
     `}
         render={(data, count) => <BlogRoll data={data} count={count} />}
     />
