@@ -1,6 +1,44 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql, StaticQuery } from 'gatsby'
+import styled from "@emotion/styled";
+
+const Card = styled.div`
+  flex: 1 0 28%;
+  border-bottom: 1px solid #2a2a2a;
+  
+
+  @media screen and (max-width: 1440px) {
+    flex: 1 0 40%;
+  }
+
+  @media screen and (max-width: 768px) {
+    flex: 1 0 100%;
+  }
+`;
+
+const BlogImage = styled.img`
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  overflow: hidden;
+`
+
+const Title = styled.h2`
+    font-size: 30px;
+  margin-top: 0;
+`;
+const Text = styled.p`
+    text-align: justify;
+    
+`;
+const Category = styled.p`
+  font-size: 18px;
+  color: rgba(42, 42, 42, 0.6);
+`;
+const Date = styled.p`
+    font-size: 16px;
+`;
 
 class BlogRoll extends React.Component {
     render() {
@@ -8,6 +46,8 @@ class BlogRoll extends React.Component {
         const { edges: posts } = data.allMarkdownRemark;
 
         return (
+
+
             <div className="columns is-multiline">
                 {posts &&
                     posts.map(({ node: post }) => (
@@ -17,28 +57,16 @@ class BlogRoll extends React.Component {
                                     post.frontmatter.featuredpost ? 'is-featured' : ''
                                 }`}
                             >
-                                <header>
-                                    <p className="post-meta">
-                                        <Link
-                                            className="title has-text-primary is-size-4"
-                                            to={post.frontmatter.path}
-                                        >
-                                            {post.frontmatter.title}
-                                        </Link>
-                                        <span> &bull; </span>
-                                        <span className="subtitle is-size-5 is-block">
-                      {post.frontmatter.date}
-                    </span>
-                                    </p>
-                                </header>
-                                <p>
-                                    {post.excerpt}
-                                    <br />
-                                    <br />
-                                    <Link className="button" to={post.frontmatter.path}>
-                                        Keep Reading →
-                                    </Link>
-                                </p>
+
+                                <Link to={post.frontmatter.path}>
+                                    <Card>
+                                        <Title>{post.frontmatter.title}</Title>
+                                        <Text>{post.excerpt}</Text>
+                                        <Date>{post.frontmatter.date}</Date>
+                                    </Card>
+                                </Link>
+
+
                             </article>
                         </div>
                     ))}
