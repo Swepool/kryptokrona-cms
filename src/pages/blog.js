@@ -5,12 +5,6 @@ import styled from "@emotion/styled";
 import PageHeader from "../components/PageHeader";
 import BlogRoll from "../components/BlogRoll";
 
-const BlogWrapper = styled.div`
-  display: flex;
-  flex-direction: row;
-  gap: 40px;
-  flex-wrap: wrap;
-`;
 
 
 const Blog = () => {
@@ -26,9 +20,7 @@ const Blog = () => {
                     heading3={'Authors'}
                     text3={'3'}
                 />
-                <BlogWrapper>
                     <BlogRoll/>
-                </BlogWrapper>
             </Container>
         </Layout>
     )
