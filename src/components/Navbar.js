@@ -14,6 +14,7 @@ const NavContainer = styled.div`
   align-items: center;
   padding-top: 20px;
   padding-bottom: 20px;
+  height: 60px;
 `;
 
 const NavNavigation = styled.div`
@@ -58,7 +59,7 @@ const HamburgerMenu = styled.div`
 `;
 
 
-const Navbar = () => {
+const Navbar = ({ toggle }) => {
     return (
         <Container>
             <NavContainer>
@@ -83,10 +84,7 @@ const Navbar = () => {
                     <BorderButton url={"https://app.nbx.com/login/signup"} text={"Sign up"} />
                     <BorderButton url={"https://app.nbx.com/login"} text={"Log in"} />
                 </NavButtons>
-                <Hamburger
-                    onClick={() => setShowMenu(!showMenu)}
-                />
-                <HamburgerMenu></HamburgerMenu>
+                <Hamburger onClick={toggle}><h3>Hello</h3></Hamburger>
             </NavContainer>
         </Container>
     );
