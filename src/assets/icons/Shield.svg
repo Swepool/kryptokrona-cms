@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="40px" height="48px" viewBox="0 0 40 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Group 4</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard" transform="translate(-219.000000, -62.000000)">
+            <g id="Group-4" transform="translate(219.000000, 62.000000)">
+                <path d="M19.8518519,1.5 C26.8618399,1.5 32.8697439,2.37408067 37.8707462,4.14671636 L37.8707462,4.14671636 L38.2031704,24.3044071 C38.186825,32.8646383 37.2946833,34.6292156 19.8498627,46.1994491 C2.40890976,34.6289975 1.51687777,32.8641511 1.500536,24.3072304 L1.500536,24.3072304 L1.5,4.61798423 C6.83396113,2.37408047 12.8418646,1.5 19.8518519,1.5 Z" id="Rectangle" stroke="#2A2A2A" stroke-width="3"></path>
+                <g id="Group" transform="translate(10.000000, 13.000000)" fill="#2A2A2A">
+                    <rect id="Rectangle" x="0" y="8" width="4" height="4"></rect>
+                    <rect id="Rectangle" x="4" y="12" width="4" height="4"></rect>
+                    <rect id="Rectangle" x="8" y="8" width="4" height="4"></rect>
+                    <rect id="Rectangle" x="12" y="4" width="4" height="4"></rect>
+                    <rect id="Rectangle" x="16" y="0" width="4" height="4"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
