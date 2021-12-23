@@ -10,8 +10,7 @@ const Button = styled.button`
   border: 2px solid #2a2a2a;
   background-color: transparent;
   font-weight: 600;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding: 10px 30px;
   height: 40px;
   text-decoration: none;
   cursor: pointer;
@@ -22,10 +21,10 @@ const Button = styled.button`
   }
 `;
 
-const BorderButton = ({ text, url }) => {
+const BorderButton = ({ label, url }) => {
   return (
     <Link to={url}>
-      <Button>{text}</Button>
+      <Button>{label}</Button>
     </Link>
   );
 };

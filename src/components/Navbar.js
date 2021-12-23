@@ -9,12 +9,10 @@ import styled from "@emotion/styled";
 
 const NavContainer = styled.div`
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  height: 60px;
+  height: 120px;
+  z-index: 2;
 `;
 
 const NavNavigation = styled.div`
@@ -81,8 +79,7 @@ const Navbar = ({ toggle }) => {
                     </Link>
                 </NavNavigation>
                 <NavButtons>
-                    <BorderButton url={"https://app.nbx.com/login/signup"} text={"Sign up"} />
-                    <BorderButton url={"https://app.nbx.com/login"} text={"Log in"} />
+                    <BorderButton url={"https://app.nbx.com/login"} label={"Log in"} />
                 </NavButtons>
                 <Hamburger onClick={toggle}><h3>=</h3></Hamburger>
             </NavContainer>

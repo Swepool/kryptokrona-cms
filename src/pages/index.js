@@ -13,6 +13,7 @@ import AvatarIcon from '../assets/icons/Avatar.svg'
 import StatsIcon from '../assets/icons/Stats.svg'
 import ExpertIcon from '../assets/icons/expert.svg'
 import {Link} from "gatsby";
+import HeroSection from "../components/HeroSection";
 
 
 const LandingDiv = styled.div`
@@ -75,24 +76,7 @@ const index = () => {
     return (
         <Layout>
             <Container>
-                <LandingDiv>
-                    <div>
-                        <Title>
-                            Buy Bitcoin and Crypto with ease.
-                        </Title>
-                        <Text>
-                            Invest in your future. Trade Bitcoin, Ethereum, and other tokens
-                            using NOK, SEK, DKK & EUR
-                        </Text>
-                        <ButtonWrapper>
-                            <BorderButton text={'Get started'}/>
-                            <FillButton text={'Learn more'}/>
-                        </ButtonWrapper>
-                    </div>
-                </LandingDiv>
-
-
-
+                <HeroSection/>
                 <CardWrapper>
                     <BorderCard icon={AvatarIcon} title={'First time'} text={'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'}></BorderCard>
                     <BorderCard icon={ExpertIcon} title={'Expert'} text={'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'}></BorderCard>
