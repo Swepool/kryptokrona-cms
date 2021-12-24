@@ -4,6 +4,7 @@ import Navbar from "../components/Navbar";
 import Sidebar from "./Sidebar";
 import Footer from './Footer'
 import '../theme/style.css'
+import SEO from "./SEO";
 
 
 const Home = ( { children } ) => {
@@ -14,6 +15,7 @@ const Home = ( { children } ) => {
     };
     return (
         <>
+                <SEO/>
                 <Sidebar isOpen={isOpen} toggle={toggle} />
                 <Navbar toggle={toggle} />
                 {children}
