@@ -14,6 +14,7 @@ const Button = styled.button`
   height: 40px;
   text-decoration: none;
   cursor: pointer;
+  user-select: none;
 
   &:hover {
     transition: all 300ms ease-in-out;
