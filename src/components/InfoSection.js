@@ -3,7 +3,7 @@ import styled from "@emotion/styled";
 import BorderButton from "./BorderButtonWhite";
 
 const WrapperSection = styled.div`
-  background-color: #2a2a2a;
+  background-color: #fff;
   width: 100%;
 `
 
@@ -55,11 +55,11 @@ const Title = styled.div`
 `
 
 const Heading = styled.h2`
-  color: #ffffff;
+  color: #2a2a2a;
 `
 
 const Text = styled.p`
-  color: #ffffff;
+  color: #2a2a2a;
 `
 
 const ImageWrapper = styled.div`
