@@ -4,7 +4,7 @@ import styled from "@emotion/styled";
 
 const Banner = styled.div`
   padding-top: 50px;
-  padding-bottom: 50px;
+  padding-bottom: 100px;
   background-color: #2a2a2a;
   color: #fff;
 `

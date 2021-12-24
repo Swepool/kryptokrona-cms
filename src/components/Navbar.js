@@ -12,7 +12,9 @@ const NavContainer = styled.div`
   justify-content: space-between;
   align-items: center;
   height: 120px;
-  z-index: 2;
+  z-index: 10;
+  position: sticky;
+  top: 0;
 `;
 
 const NavNavigation = styled.div`
@@ -62,7 +64,7 @@ const Navbar = ({ toggle }) => {
         <Container>
             <NavContainer>
                 <Link to='/'>
-                    <img style={{Height: '40px'}}src={LogoDark} alt={'NBX logo'}/>
+                    <img style={{Height: '40px'}} src={LogoDark} alt={'NBX logo'}/>
                 </Link>
                 <NavNavigation>
                     <Link to="/blog">
@@ -79,7 +81,9 @@ const Navbar = ({ toggle }) => {
                     </Link>
                 </NavNavigation>
                 <NavButtons>
-                    <BorderButton url={"https://app.nbx.com/login"} label={"Log in"} />
+                    <Link to='/signin'>
+                        <BorderButton label={"Sign in"} />
+                    </Link>
                 </NavButtons>
                 <Hamburger onClick={toggle}><h3>=</h3></Hamburger>
             </NavContainer>

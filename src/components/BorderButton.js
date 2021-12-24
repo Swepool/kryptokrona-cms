@@ -16,16 +16,16 @@ const Button = styled.button`
   cursor: pointer;
 
   &:hover {
-    transition: 300ms;
+    transition: all 300ms ease-in-out;
     background-color: rgba(42, 42, 42, 0.29);
   }
 `;
 
 const BorderButton = ({ label, url }) => {
   return (
-    <Link to={url}>
+    <a href={url}>
       <Button>{label}</Button>
-    </Link>
+    </a>
   );
 };
 
