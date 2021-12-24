@@ -24,7 +24,7 @@ const Button = styled.button`
 
 const BorderButton = ({ label, url }) => {
   return (
-    <a href={url}>
+    <a href={url} style={{userSelect: 'none'}}>
       <Button>{label}</Button>
     </a>
   );

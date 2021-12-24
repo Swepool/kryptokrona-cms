@@ -1,6 +1,6 @@
 import * as React from 'react'
 import styled from "@emotion/styled";
-import BorderButton from "./BorderButtonWhite";
+import BorderButton from "./BorderButton";
 
 const WrapperSection = styled.div`
   background-color: #fff;
@@ -50,7 +50,7 @@ const TextWrapper = styled.div`
 `
 
 const Title = styled.div`
-    color: #BEED5E;
+  color: rgba(42, 42, 42, 0.5);
   font-size: 20px;
 `
 
@@ -81,7 +81,7 @@ const InfoSection = ({ title, heading, text, btntext, url, img }) => {
                             <Title>{title}</Title>
                             <Heading>{heading}</Heading>
                             <Text>{text}</Text>
-                            <BorderButton text={btntext} url={url}/>
+                            <BorderButton label={btntext} url={url}/>
                         </TextWrapper>
                     </Column1>
                     <Column2>
