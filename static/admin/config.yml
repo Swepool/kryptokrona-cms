@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: swepool/website-gatsby-netlify
+  repo: swepool/kryptokrona-cms
 media_folder: static/assets
 public_folder: assets
 collections:
