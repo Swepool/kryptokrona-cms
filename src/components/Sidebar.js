@@ -1,13 +1,13 @@
 import React from 'react';
 import styled from "@emotion/styled";
-import BorderButtonWhite from "./BorderButtonWhite";
+import {IoClose} from "react-icons/all";
 
 const SidebarContainer = styled.aside`
   position: fixed;
-  z-index: 999;
+  z-index: 99;
   width: 100%;
   height: 100%;
-  background: rgba(42, 42, 42, 0.9);
+  background: rgba(42, 42, 42, 0.7);
   display: grid;
   align-items: center;
   top: 0;
@@ -15,19 +15,15 @@ const SidebarContainer = styled.aside`
   transition: 0.3s ease-in-out;
   opacity: ${({isOpen}) => (isOpen ? '100%' : '0')};
   top: ${({isOpen}) => (isOpen ? '0' : '-100%')};
-  z-index: 999;
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
 `;
 
-const CloseIcon = styled.h3`
-  color: #fff;
-`;
 
 const Icon = styled.div`
   position: absolute;
-  top: 1.2rem;
-  right: 1.5rem;
+  top: 1.5rem;
+  right: 2rem;
   background: transparent;
   border: transparent;
   font-size: 2rem;
@@ -58,12 +54,11 @@ const SidebarLink = styled.a`
   text-decoration: none;
   list-style: none;
   transition: 0.2s ease-in-out;
-  text-decoration: none;
   color: #fff;
   cursor: pointer;
 
   &:hover {
-    color: #01bf71;
+    color: rgba(255, 255, 255, 0.5);
     transition: 0.2s ease-in-out;
   }
 `;
@@ -78,51 +73,18 @@ const Sidebar = ({ isOpen, toggle }) => {
     return (
         <SidebarContainer isOpen={isOpen} onClick={toggle}>
             <Icon onClick={toggle}>
-                <CloseIcon>X</CloseIcon>
+                <IoClose color="#ffffff"/>
             </Icon>
             <SidebarWrapper>
                 <SidebarMenu>
-                    <SidebarLink
-                        to='/blog'
-                        onClick={toggle}
-                        smooth={true}
-                        duration={500}
-                        spy={true}
-                        exact='true'
-                    >
-                        About us
-                    </SidebarLink>
-                    <SidebarLink
-                        onClick={toggle}
-                        smooth={true}
-                        duration={500}
-                        spy={true}
-                        exact='true'
-                    >
-                        Markets
-                    </SidebarLink>
-                    <SidebarLink
-                        onClick={toggle}
-                        smooth={true}
-                        duration={500}
-                        spy={true}
-                        exact='true'
-                    >
-                        OTC
-                    </SidebarLink>
-                    <SidebarLink
-                        onClick={toggle}
-                        smooth={true}
-                        duration={500}
-                        spy={true}
-                        exact='true'
-                    >
-                        Support
-                    </SidebarLink>
+                    <SidebarLink href="/wallets">Wallet</SidebarLink>
+                    <SidebarLink className="rgbText" href="/hugin">Hugin</SidebarLink>
+                    <SidebarLink href="/mining">Mining</SidebarLink>
+                    <SidebarLink href="https://explorer.kryptokrona.se">Explorer</SidebarLink>
+                    <SidebarLink href="blog">Blog</SidebarLink>
+                    <SidebarLink href="/about">About</SidebarLink>
                 </SidebarMenu>
                 <SideBtnWrap style={{display: 'flex', gap: '10px'}}>
-                    <BorderButtonWhite text={'Sign in'}/>
-                    <BorderButtonWhite text={'Log in'}/>
                 </SideBtnWrap>
             </SidebarWrapper>
         </SidebarContainer>
