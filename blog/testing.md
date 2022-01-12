@@ -1,5 +1,5 @@
 ---
-path: /whatsup
+path: /blog/whatsup
 layout: blog
 title: Testing
 date: 2022-01-12T14:50:19.628Z
