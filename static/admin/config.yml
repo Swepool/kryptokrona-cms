@@ -1,7 +1,8 @@
 backend:
   name: github
-  repo: swepool/kryptokrona-cms
-media_folder: static/assets
+  repo: Swepool/kryptokrona-cms
+
+media_folder: /assets
 public_folder: assets
 collections:
   - name: "blog" # Used in routes, e.g., /admin/collections/blog
